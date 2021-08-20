@@ -1,0 +1,33 @@
+﻿*{
+  margin: 0px;
+  padding: 0px;
+}
+
+.barra{
+  background-color: rgb(81, 149, 167);
+  color: white;
+}
+
+.logo{
+}
+
+.content-barra{
+  max-width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center !important;
+}
+
+.content-barra ul{
+  display: inline-block;
+  margin-bottom: 0rem;
+}
+
+.content-barra ul li{
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+}

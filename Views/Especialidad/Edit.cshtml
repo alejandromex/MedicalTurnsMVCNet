@@ -1,0 +1,24 @@
+@model Turnos.Models.Especialidad;
+
+
+    
+<div class="container">
+    <h2>Especialidad @Model.Descripcion</h2>
+    <div>
+        <form asp-action="Edit">
+
+            <div asp-validation-summary="ModelOnly"></div>
+                <input type="hidden" asp-for="IdEspecialidad"/>
+                <div>
+                    <label asp-for="Descripcion"></label>
+                    <input asp-for="Descripcion" type="text">
+                    <span asp-validation-for="Descripcion">El campo es obligatorio</span>
+                </div>
+                
+                <input type="submit" value="Guardar">
+
+        </form>
+    </div>
+    <a asp-action="Index">Regresar</a>
+</div>
+

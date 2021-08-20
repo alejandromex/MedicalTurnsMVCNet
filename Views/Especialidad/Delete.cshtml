@@ -1,0 +1,26 @@
+@model Turnos.Models.Especialidad;
+
+
+<div class="container">
+
+    <h3 class="text-center">¿Estas seguro de Eliminar la Especialidad?</h3>
+    <div>
+        <dl>
+            <dt>
+               @Html.DisplayNameFor(model => model.Descripcion); 
+            </dt>
+            <dd>
+                @Html.DisplayFor(modelo => modelo.Descripcion);
+            </dd>
+
+            <form asp-action="Delete">
+
+                <input type="hidden" asp-for="IdEspecialidad"/>
+                <input type="submit" class="btn btn-danger" value="Eliminar">
+
+            </form>
+
+        </dl>
+        
+    </div>
+</div>

@@ -1,0 +1,37 @@
+@model IEnumerable<Turnos.Models.Especialidad>
+
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Descripcion)</th>
+                <th>
+                    Acciones
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Descripcion)
+                    </td>
+                    <td>
+                        <a asp-controller="Especialidad" asp-action="Edit" asp-route-id="@item.IdEspecialidad">
+                            <div class="btn btn-primary">
+                                Editar
+                            </div>
+                        </a>
+                        <a asp-controller="Especialidad" asp-action="Delete" asp-route-id="@item.IdEspecialidad">
+                            <div class="btn btn-danger">
+                                Eliminar
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
